@@ -11,6 +11,8 @@
 
     <link rel="stylesheet" href="styles/order.css" />
     <link rel="stylesheet" href="styles/order_adaptive.css" />
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=72602515-ac0d-400e-9618-80b4b450380c&suggest_apikey=4f19591b-9900-4866-8475-09cb89e9077c" type="text/javascript"></script>
 </head>
 
 <body>
@@ -18,13 +20,13 @@
     <div id="map"></div>
 
     <header class="header">
-        <a class="header-brand" href="#">
+        <a class="header-brand" href="./index.html">
             <div class="header-logo">D</div>
             <div class="header-title">Dostaffkin</div>
         </a>
         <nav class="header-menu">
             <a class="header-link" href="#">Оформить <span>доставку</span></a>
-            <a class="header-link" href="#">Отследить <span>посылку</span></a>
+            <a class="header-link" href="./track.html">Отследить <span>посылку</span></a>
         </nav>
     </header>
     <aside class="main" id="sidebar">
@@ -120,6 +122,21 @@
                     </div>
                 </div>
             </div>
+            <div class="main-speed">
+                <div class="main-block-title">Скорость доставки</div>
+
+                <div class="main-speeds">
+                    <div class="main-speed-card is-active" data-value="regular">
+                        <img class="main-speed-media" src="images/icons/regular.svg" alt="Regular" />
+                        <div class="main-speed-description">Обычная</div>
+                    </div>
+                    <div class="main-speed-card" data-value="fast">
+                        <img class="main-speed-media" src="images/icons/fast.svg" alt="Fast" />
+                        <div class="main-speed-description">Приоритетная</div>
+                    </div>
+
+                </div>
+            </div>
             <div class="main-calculate-block">
                 <button id="calc" class="button calculate-button" type="button" disabled>Рассчитать</button>
             </div>
@@ -170,6 +187,7 @@
             </div>
         </div>
     </aside>
+    <script src="scripts/order.js"></script>
 </body>
 
 </html>
